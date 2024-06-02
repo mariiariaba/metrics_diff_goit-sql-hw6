@@ -59,8 +59,7 @@ select
   	when sum (spend) > 0 then round((sum (value) - sum (spend)) *100 / sum (spend) :: numeric, 2)
   end as "ROMI"
 from all_campaigns_data
-group by 1,2
-)
+group by 1,2)
 SELECT
 	ad_month,
 	utm_campaign,
